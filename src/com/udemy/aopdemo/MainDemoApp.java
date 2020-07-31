@@ -26,6 +26,18 @@ public class MainDemoApp {
 		theAccountDAO.addAccount(myAccount, true); // will only match on addAccount for this param type
 		theAccountDAO.doWork();
 		
+				
+		// call the accountdao getter/setter methods
+		theAccountDAO.setName("Harika");
+		theAccountDAO.setServiceCode("Diamond");
+		
+		String name = theAccountDAO.getName();
+		String code = theAccountDAO.getServiceCode();
+		
+		System.out.println("Name: " +name);
+		System.out.println("Service: " +code);
+
+		
 		// call the membership method
 		theMembershipDAO.addAnyMethod(); // will not match, as its no param
 		theMembershipDAO.goToSleep();
